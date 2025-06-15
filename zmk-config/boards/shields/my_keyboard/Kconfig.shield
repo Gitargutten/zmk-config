@@ -6,19 +6,19 @@ config SHIELD_MY_KEYBOARD_LEFT
 config SHIELD_MY_KEYBOARD_RIGHT
     def_bool $(shields_list_contains,my_keyboard_right)
 
-config SHIELD_MY_KEYBOARD
-    def_bool $(shields_list_contains,my_keyboard)
-
-if SHIELD_MY_KEYBOARD
+if SHIELD_MY_KEYBOARD_LEFT || SHIELD_MY_KEYBOARD_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "My Keyboard"
 
-if ZMK_SPLIT
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_SPLIT
     default y
 
-endif # ZMK_SPLIT
+if SHIELD_MY_KEYBOARD_LEFT
 
-endif # SHIELD_MY_KEYBOARD
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # SHIELD_MY_KEYBOARD_LEFT
+
+endif # SHIELD_MY_KEYBOARD_LEFT || SHIELD_MY_KEYBOARD_RIGHT
