@@ -20,7 +20,7 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: MY_KEYBOARD_LEFT
+    shield: my_keyboard_left
   - board: nice_nano_v2
-    shield: MY_KEYBOARD_RIGHT
+    shield: my_keyboard_right
     snippet: zmk-usb-logging
