@@ -20,7 +20,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: my_keyboard_left
+    shield: my_keyboard
+    cmake-args: -DSHIELD=my_keyboard_left
   - board: nice_nano_v2
-    shield: my_keyboard_right
+    shield: my_keyboard
+    cmake-args: -DSHIELD=my_keyboard_right
     snippet: zmk-usb-logging
