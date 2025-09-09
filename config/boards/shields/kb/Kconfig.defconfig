@@ -4,9 +4,6 @@ if SHIELD_KB_LEFT
 config ZMK_KEYBOARD_NAME
     default "Pappas tastatur"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
 endif
 
 if SHIELD_KB_LEFT || SHIELD_KB_RIGHT
